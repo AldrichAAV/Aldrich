@@ -54,8 +54,8 @@ DateTime *reloj;
 StaticJsonDocument<512> horaActual;
 
 
-const char *ssid="Ubee16F8-2.4G";
-const char *passwrd="5F99F616F8";
+const char *ssid="CGA2121_W3dpsKv";
+const char *passwrd="fvwMetJLPR4XP";
 
 
 void setup() {
