@@ -2,7 +2,7 @@
 #include <WiFi.h>
 #include <HTTPClient.h>
 #include <ArduinoJson.h>
-
+//comentario de prueba para ver si se cambia
 class conexionWeb{
   private:
 
