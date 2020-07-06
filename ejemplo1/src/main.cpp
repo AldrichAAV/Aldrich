@@ -5,7 +5,6 @@
 //comentario de prueba para ver si se cambia
 class conexionWeb{
   private:
-
   public:
     conexionWeb(const char *_SSID, const char* _PASSWORD ){
       WiFi.begin(_SSID, _PASSWORD);
@@ -14,10 +13,9 @@ class conexionWeb{
           Serial.print("...");
       }
     }
-
 }; 
 
-class DateTime
+class Tiempo
 {
 private:
   int defaultTime;
@@ -28,7 +26,7 @@ private:
 
 public:
   char timeStringBuff[20];
-  DateTime()
+  Tiempo()
   {
     defaultTime = 0;
     configTime(gmtOffset_sec, daylightOffset_sec, ntpServer);
@@ -50,7 +48,7 @@ public:
   }
 };
 conexionWeb *webInterface;
-DateTime *reloj;
+Tiempo *reloj;
 StaticJsonDocument<512> horaActual;
 
 
@@ -61,7 +59,7 @@ const char *passwrd="fvwMetJLPR4XP8aekEP";
 void setup() {
   Serial.begin(115200);
   webInterface= new conexionWeb(ssid,passwrd);
-  reloj=new DateTime();
+  reloj=new Tiempo();
   
 }
 int suma=0;
