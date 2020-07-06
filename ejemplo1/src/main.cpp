@@ -55,7 +55,7 @@ StaticJsonDocument<512> horaActual;
 
 
 const char *ssid="CGA2121_W3dpsKv";
-const char *passwrd="fvwMetJLPR4XP";
+const char *passwrd="fvwMetJLPR4XP8aekEP";
 
 
 void setup() {
