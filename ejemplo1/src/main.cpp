@@ -54,8 +54,6 @@ StaticJsonDocument<512> horaActual;
 
 const char *ssid="CGA2121_W3dpsKv";
 const char *passwrd="fvwMetJLPR4XP8aekEP";
-
-
 void setup() {
   Serial.begin(115200);
   webInterface= new conexionWeb(ssid,passwrd);
