@@ -23,7 +23,6 @@ private:
   const char *ntpServer = "pool.ntp.org";
   const long gmtOffset_sec = 0;
   const int daylightOffset_sec = 0;
-
 public:
   char timeStringBuff[20];
   Tiempo()
@@ -32,15 +31,12 @@ public:
     configTime(gmtOffset_sec, daylightOffset_sec, ntpServer);
     getTime();
   }
-
   void getTime()
   {   
     setLocalTime();
   }
-
   void setLocalTime()
   {
-    
     if (!getLocalTime(&timeinfo))
     {
     }
@@ -50,15 +46,12 @@ public:
 conexionWeb *webInterface;
 Tiempo *reloj;
 StaticJsonDocument<512> horaActual;
-
-
 const char *ssid="CGA2121_W3dpsKv";
 const char *passwrd="fvwMetJLPR4XP8aekEP";
 void setup() {
   Serial.begin(115200);
   webInterface= new conexionWeb(ssid,passwrd);
   reloj=new Tiempo();
-  
 }
 int suma=0;
 void loop() {
